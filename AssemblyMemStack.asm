@@ -8,9 +8,12 @@
 
 
 _start:
-	push 0x0841424
-
-
+	push 0x00434241
+	mov %eax, 4 # write = 4
+	mov %ebx, 1 # stdout = 1
+	mov %ecx, %esp
+	mov %edx, 3
+	int 0x80
 	# Exit syscall
 	mov %eax, 1
 	mov %ebx, 65
@@ -20,5 +23,4 @@ _start:
 
 .section .data
 	message:
-	.ascii "Hello, Assembly\n"
 
