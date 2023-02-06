@@ -8,11 +8,11 @@
 
 
 _start:
-	push 0x00434241
+	push 0x0a434241
 	mov %eax, 4 # write = 4
 	mov %ebx, 1 # stdout = 1
 	mov %ecx, %esp
-	mov %edx, 3
+	mov %edx, 4
 	int 0x80
 	# Exit syscall
 	mov %eax, 1
