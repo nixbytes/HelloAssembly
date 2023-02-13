@@ -22,4 +22,3 @@ _start:
 .section .data
 	message:
 	.ascii "Hello, Assembly\n"
-
